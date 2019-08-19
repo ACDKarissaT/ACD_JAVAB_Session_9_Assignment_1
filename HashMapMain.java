@@ -65,16 +65,16 @@ class EmpName implements Comparable<EmpName>{
 
 public class HashMapMain {
 	public static void main(String[] args) {
-		HashMap<Object, Object> hm= new HashMap<Object, Object>();
+		HashMap<Empcode, EmpName> hm= new HashMap<Empcode, EmpName>();
 		
 		for (int i = 0; i <10; i++) {
 			hm.put(new Empcode("Key" + (i+1)), new EmpName("Name" + (i+1)));
 		}
 	
-		Set<Object> codes = hm.keySet();
+		Set<Empcode> codes = hm.keySet();
 		System.out.println("Printing names...");
 		
-		for (Object empcode : codes) {
+		for (Empcode empcode : codes) {
 			System.out.println(hm.get(empcode));
 		}
 	}
